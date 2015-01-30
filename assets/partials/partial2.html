@@ -1,0 +1,26 @@
+<p class="first-step">Add bookmark :
+    <input type=text class="the-bm" data-ng-keypress="keypressed($event)" data-ng-model="bookmarkToAdd" />
+    <input type="button" value="Add a bookmark" data-ng-click="addToBookmark()" />
+</p>
+
+<div class="combo">
+    <!--data-ng-options : affiche l'élément donné (ici url) dans la query bookmarks (déclarée dans controller) -->
+    <select data-ng-options="bookmark.url for bookmark in bookmarks" data-ng-model="bookmark"></select>
+</div>
+
+<div>
+    <p>Step 2 : add as much tag as you want to this wonderful bookmark</p>
+    <input type="text" data-ng-model="tagToAdd" />
+    <input type="button" value="ajouter" data-ng-click="addToTag()" />
+</div>
+
+<div class="current-bookmark">
+    <p>Bookmark created or selected : <span data-ng-bind="bookmark.url"></span></p>
+</div>
+
+<div class="tag-related">
+    <p>Tags reliés à ce bookmark</p>
+    <ul>
+        <li data-ng-repeat="currentTag in tags">{{currentTag.nom}} <input type="button" data-ng-click="deleteTag(currentTag.id)" value="delete" /></li>
+    </ul>
+</div>

@@ -1,0 +1,9 @@
+<ul style="list-style:none;">
+    <li style="display:inline-block; margin-right:20px;" data-ng-repeat="currentTag in tagList">
+        <input ng-click="updateTags(currentTag)" type="checkbox" ng-model="tagChecked[currentTag.id]"/> <span>{{currentTag.nom}}</span>
+    </li>
+</ul>
+    <li data-ng-repeat="currentBookmark in bookmarkList">
+        <a href="{{currentBookmark.url}}">{{currentBookmark.url}}</a>
+    </li>
+</ul>
