@@ -12,3 +12,7 @@ Etape d'installation Angular :
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 $scope --> permet de set un élément au chargement de la page via les controllers. 
+
+passage en prod : settings / reveal config vars / créer une nouvelle var
+
+NODE_ENV = production
